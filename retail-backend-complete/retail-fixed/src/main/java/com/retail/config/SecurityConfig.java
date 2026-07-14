@@ -99,7 +99,7 @@ public class SecurityConfig {
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsMapping("/**", config);  // fixed: registerCorsConfiguration not registerCorsMapping
+        source.registerCorsConfiguration("/**", configuration);  // fixed: registerCorsConfiguration not registerCorsMapping
         return source;
     }
 }
